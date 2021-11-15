@@ -45,18 +45,18 @@ function onStartClick() {
     };
 
     const convertedMs = convertMs(targetDate);
-    setTextContent(refs, convertedMs);
+    setTextContent(convertedMs);
     // console.log(days, hours, minutes, seconds);
     // console.log(modifyTime(days));
   }, 1000);
 };
 
-function setTextContent(obj, convertedMs){
-const { days, hours, minutes, seconds } = convertedMs;
-obj.daysTimer.textContent = modifyTime(days);
-obj.hoursTimer.textContent = modifyTime(hours);
-obj.minutesTimer.textContent = modifyTime(minutes);
-obj.secondsTimer.textContent = modifyTime(seconds);
+function setTextContent({ days, hours, minutes, seconds }){
+
+refs.daysTimer.textContent = modifyTime(days);
+refs.hoursTimer.textContent = modifyTime(hours);
+refs.minutesTimer.textContent = modifyTime(minutes);
+refs.secondsTimer.textContent = modifyTime(seconds);
 };
 
 
